@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[2718,["/_next/static/chunks/a66e09a7c2336f67.js"],"ViewportBoundary"]
+3:I[2718,["/_next/static/chunks/a66e09a7c2336f67.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"zgYUUbikpYZ_-yWItYhfc","rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Filmin Admin"}],["$","meta","1",{"name":"description","content":"Filmin Admin Dashboard"}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}

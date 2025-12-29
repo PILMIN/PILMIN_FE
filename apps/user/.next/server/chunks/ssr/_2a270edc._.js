@@ -1,0 +1,3 @@
+module.exports=[33077,a=>{a.n(a.i(82960))},98710,a=>{a.n(a.i(13490))},2386,a=>{a.n(a.i(52854))},91306,a=>{a.n(a.i(31856))},25770,a=>{"use strict";var b=a.i(76925);function c(){return(0,b.jsx)("div",{className:"flex min-h-screen items-center justify-center",children:(0,b.jsxs)("main",{className:"text-center",children:[(0,b.jsx)("h1",{className:"text-4xl font-bold",children:"Filmin"}),(0,b.jsx)("p",{className:"mt-4 text-gray-600",children:"사용자 앱"})]})})}a.s(["default",()=>c])}];
+
+//# sourceMappingURL=_2a270edc._.js.map

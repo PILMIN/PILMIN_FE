@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pilmin Frontend
 
-## Getting Started
+Turborepo 기반의 모노레포 프로젝트입니다.
 
-First, run the development server:
+## 프로젝트 구조
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+pilmin-fe/
+├── apps/
+│   ├── web/          # 랜딩페이지 (port: 3000)
+│   ├── admin/        # 어드민 (port: 3001)
+│   └── user/         # 일반유저 (port: 3002)
+├── packages/
+│   └── ui/           # 공유 UI 컴포넌트 (@pilmin/ui)
+├── package.json
+├── turbo.json
+└── pnpm-workspace.yaml
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 시작하기
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 의존성 설치
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm install
+```
 
-## Learn More
+### 개발 서버 실행
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# 전체 앱 동시 실행
+pnpm dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 개별 앱 실행
+pnpm dev:web      # 랜딩페이지 (http://localhost:3000)
+pnpm dev:admin    # 어드민 (http://localhost:3001)
+pnpm dev:user     # 유저 (http://localhost:3002)
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 빌드
 
-## Deploy on Vercel
+```bash
+# 전체 빌드
+pnpm build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 개별 빌드
+pnpm turbo build --filter=@pilmin/web
+pnpm turbo build --filter=@pilmin/admin
+pnpm turbo build --filter=@pilmin/user
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 린트 & 타입 체크
+
+```bash
+pnpm lint
+pnpm type-check
+```
+
+## 앱 설명
+
+| 앱 | 패키지명 | 포트 | 설명 |
+|---|---------|-----|-----|
+| web | @pilmin/web | 3000 | 랜딩페이지 |
+| admin | @pilmin/admin | 3001 | 어드민 대시보드 |
+| user | @pilmin/user | 3002 | 일반유저 서비스 |
+
+## 새 앱/패키지 추가
+
+```bash
+# 대화형으로 새 워크스페이스 추가
+pnpm turbo gen workspace
+```
+
+## 기술 스택
+
+- **Framework**: Next.js 16
+- **Build System**: Turborepo
+- **Package Manager**: pnpm
+- **Styling**: Tailwind CSS 4
+- **Language**: TypeScript
