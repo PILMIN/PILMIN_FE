@@ -1,6 +1,8 @@
 {
-  "name": "@pilmin/config",
-  "version": "0.0.0",
-  "private": true,
-  "files": ["*.d.ts"]
+	"name": "@pilmin/config",
+	"version": "0.0.0",
+	"private": true,
+	"files": [
+		"*.d.ts"
+	]
 }
