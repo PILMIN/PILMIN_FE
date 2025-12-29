@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///Users/minsu/Documents/Projects/filmin-fe/apps/user/app/page.tsx"],"sourcesContent":["export default function UserHome() {\n  return (\n    <div className=\"flex min-h-screen items-center justify-center\">\n      <main className=\"text-center\">\n        <h1 className=\"text-4xl font-bold\">Pilmin</h1>\n        <p className=\"mt-4 text-gray-600\">사용자 앱</p>\n      </main>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,+YAAC;QAAI,WAAU;kBACb,cAAA,+YAAC;YAAK,WAAU;;8BACd,+YAAC;oBAAG,WAAU;8BAAqB;;;;;;8BACnC,+YAAC;oBAAE,WAAU;8BAAqB;;;;;;;;;;;;;;;;;AAI1C"}}]
-}
