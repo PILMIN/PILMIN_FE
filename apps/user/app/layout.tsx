@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "Pilmin",
-	description: "Pilmin User App",
+	title: "토론장",
+	description: "실시간 찬반 투표로 의견을 나누는 토론 플랫폼",
 };
 
 export default function RootLayout({

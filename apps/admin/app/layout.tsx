@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "Pilmin Admin",
-	description: "Pilmin Admin Dashboard",
+	title: "토론장 | 어드민",
+	description: "토론장 Admin Dashboard",
 };
 
 export default function RootLayout({
