@@ -6,13 +6,16 @@
     "dev": "turbo dev",
     "build": "turbo build",
     "start": "turbo start",
-    "lint": "turbo lint",
     "type-check": "turbo type-check",
     "dev:web": "turbo dev --filter=@pilmin/web",
     "dev:admin": "turbo dev --filter=@pilmin/admin",
-    "dev:user": "turbo dev --filter=@pilmin/user"
+    "dev:user": "turbo dev --filter=@pilmin/user",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "check": "biome check --write ."
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.3.10",
     "turbo": "^2.7.2"
   },
   "packageManager": "pnpm@10.26.2"
