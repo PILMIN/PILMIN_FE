@@ -33,6 +33,7 @@ turbo-build.log
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.development
 
 # vercel
 .vercel
