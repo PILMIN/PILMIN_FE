@@ -236,8 +236,8 @@ mv postcss.config.mjs apps/web/
 | 앱 | 포트 |
 |---|-----|
 | web | 3000 |
-| admin | 3001 |
-| user | 3002 |
+| user | 3001 |
+| admin | 3002 |
 
 ---
 
