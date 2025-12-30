@@ -85,6 +85,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@pilmin/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       axios:
         specifier: ^1.13.2
         version: 1.13.2

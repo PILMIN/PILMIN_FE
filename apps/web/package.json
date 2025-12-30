@@ -9,6 +9,7 @@
 		"type-check": "tsc --noEmit"
 	},
 	"dependencies": {
+		"@pilmin/ui": "workspace:*",
 		"axios": "^1.13.2",
 		"next": "16.1.1",
 		"react": "19.2.3",
