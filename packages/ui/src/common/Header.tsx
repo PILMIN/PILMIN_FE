@@ -1,4 +1,4 @@
-import { LogoIcon, PlusIcon, ProfileIcon } from "../assets";
+import { LogoIcon, PlusIcon, ProfileIcon } from "../icons";
 
 export default function Header() {
   return (

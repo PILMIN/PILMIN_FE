@@ -1,2 +1,5 @@
-// 공유 컴포넌트를 여기에 export 하세요
+// 공유 컴포넌트
 export * from "./common";
+
+// 아이콘
+export * from "./icons";
