@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import CommentItem from "../../../components/CommentItem";
 
 // 임시 데이터
 const debateDetailData = {
@@ -106,7 +107,7 @@ export default function DebateDetailPage() {
               {debateDetailData.category}
             </span>
             {debateDetailData.status === "진행중" && (
-              <span className="inline-flex items-center gap-1 bg-green-500 text-white text-xs font-medium px-2.5 py-1 rounded-full">
+              <span className="inline-flex items-center gap-1 bg-green-500 text-white text-xs font-medium px-2.5 py-1 rounded-full select-none">
                 <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
                 진행중
               </span>
@@ -229,12 +230,12 @@ export default function DebateDetailPage() {
             <div className="flex justify-between items-center mb-3">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 bg-blue-500 rounded-full"></span>
-                <span className="text-sm font-semibold text-gray-900">
+                <span className="text-sm font-semibold text-gray-900 select-none">
                   찬성 {debateDetailData.agreePercent}%
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold text-gray-900">
+                <span className="text-sm font-semibold text-gray-900 select-none">
                   반대 {debateDetailData.disagreePercent}%
                 </span>
                 <span className="w-2.5 h-2.5 bg-red-500 rounded-full"></span>
@@ -262,7 +263,7 @@ export default function DebateDetailPage() {
           <div className="grid grid-cols-2 gap-4 mb-8">
             <button
               type="button"
-              className="flex items-center justify-center gap-2 py-4 bg-blue-50 text-blue-600 rounded-xl font-semibold hover:bg-blue-100 transition-colors border border-blue-200"
+              className="flex items-center justify-center gap-2 py-4 bg-blue-50 text-blue-600 rounded-xl font-semibold hover:bg-blue-100 transition-colors border border-blue-200 select-none"
             >
               <svg
                 className="w-5 h-5"
@@ -282,7 +283,7 @@ export default function DebateDetailPage() {
             </button>
             <button
               type="button"
-              className="flex items-center justify-center gap-2 py-4 bg-red-50 text-red-600 rounded-xl font-semibold hover:bg-red-100 transition-colors border border-red-200"
+              className="flex items-center justify-center gap-2 py-4 bg-red-50 text-red-600 rounded-xl font-semibold hover:bg-red-100 transition-colors border border-red-200 select-none"
             >
               <svg
                 className="w-5 h-5"
@@ -323,7 +324,7 @@ export default function DebateDetailPage() {
             <button
               type="button"
               onClick={() => setCommentFilter("전체")}
-              className={`px-6 py-3 font-medium transition-colors border-b-2 ${
+              className={`px-6 py-3 font-medium transition-colors border-b-2 select-none ${
                 commentFilter === "전체"
                   ? "border-gray-900 text-gray-900"
                   : "border-transparent text-gray-500 hover:text-gray-700"
@@ -334,7 +335,7 @@ export default function DebateDetailPage() {
             <button
               type="button"
               onClick={() => setCommentFilter("찬성")}
-              className={`px-6 py-3 font-medium transition-colors border-b-2 ${
+              className={`px-6 py-3 font-medium transition-colors border-b-2 select-none ${
                 commentFilter === "찬성"
                   ? "border-blue-500 text-blue-600"
                   : "border-transparent text-gray-500 hover:text-gray-700"
@@ -345,7 +346,7 @@ export default function DebateDetailPage() {
             <button
               type="button"
               onClick={() => setCommentFilter("반대")}
-              className={`px-6 py-3 font-medium transition-colors border-b-2 ${
+              className={`px-6 py-3 font-medium transition-colors border-b-2 select-none ${
                 commentFilter === "반대"
                   ? "border-red-500 text-red-600"
                   : "border-transparent text-gray-500 hover:text-gray-700"
@@ -358,59 +359,13 @@ export default function DebateDetailPage() {
           {/* 댓글 리스트 */}
           <div className="space-y-4">
             {filteredComments.map((comment) => (
-              <div
+              <CommentItem
                 key={comment.id}
-                className="bg-white rounded-xl p-6 border border-gray-200"
-              >
-                <div className="flex items-start gap-4">
-                  {/* 프로필 아이콘 */}
-                  <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-gray-600 font-medium">
-                      {comment.author[0]}
-                    </span>
-                  </div>
-
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-gray-900">
-                        {comment.author}
-                      </span>
-                      <span
-                        className={`inline-flex items-center gap-1 ${
-                          comment.position === "찬성"
-                            ? "bg-blue-500"
-                            : "bg-red-500"
-                        } text-white text-xs font-medium px-2.5 py-0.5 rounded-full`}
-                      >
-                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                        {comment.position}
-                      </span>
-                      <span className="text-sm text-gray-500">
-                        {comment.time}
-                      </span>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed">
-                      {comment.content}
-                    </p>
-                  </div>
-
-                  {/* 더보기 메뉴 */}
-                  <button
-                    type="button"
-                    className="p-1 hover:bg-gray-100 rounded transition-colors"
-                    aria-label="더보기"
-                  >
-                    <svg
-                      className="w-5 h-5 text-gray-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
+                author={comment.author}
+                position={comment.position}
+                time={comment.time}
+                content={comment.content}
+              />
             ))}
           </div>
         </div>

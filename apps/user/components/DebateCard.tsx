@@ -30,7 +30,7 @@ export default function DebateCard({
       <div className="flex items-center gap-2 mb-4">
         <span className="text-sm text-gray-700 font-medium">{category}</span>
         {status === "진행중" && (
-          <span className="inline-flex items-center gap-1 bg-green-500 text-white text-xs font-medium px-2.5 py-1 rounded-full">
+          <span className="inline-flex items-center gap-1 bg-green-500 text-white text-xs font-medium px-2.5 py-1 rounded-full select-none">
             <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
             진행중
           </span>
@@ -45,10 +45,10 @@ export default function DebateCard({
       {/* 찬반 비율 */}
       <div className="mb-3">
         <div className="flex justify-between items-center mb-2">
-          <span className="text-sm font-semibold text-blue-500">
+          <span className="text-sm font-semibold text-blue-500 select-none">
             찬성 {agreePercent}%
           </span>
-          <span className="text-sm font-semibold text-red-500">
+          <span className="text-sm font-semibold text-red-500 select-none">
             반대 {disagreePercent}%
           </span>
         </div>
