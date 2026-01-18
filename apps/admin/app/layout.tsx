@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "@pilmin/ui";
 
 export const metadata: Metadata = {
   title: "토론장 | 어드민",
@@ -15,8 +14,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <Header />
-        <main className="pt-14">{children}</main>
+        {children}
       </body>
     </html>
   );
