@@ -171,7 +171,10 @@ export default function Sidebar() {
 
         {/* Logout */}
         <div className="border-t border-gray-200 p-4">
-          <button type="button" className="flex w-full items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-red-600 transition-colors hover:bg-red-50">
+          <button
+            type="button"
+            className="flex w-full items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-red-600 transition-colors hover:bg-red-50"
+          >
             <svg
               className="h-5 w-5"
               fill="none"
